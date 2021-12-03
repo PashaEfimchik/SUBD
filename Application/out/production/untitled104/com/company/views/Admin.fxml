@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #4D7198;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.controllers.AdminController">
+    <center>
+        <AnchorPane fx:id="content_area" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="604.0" style="-fx-background-color: #A6BDD7;" BorderPane.alignment="CENTER">
+            <children>
+                <TableView fx:id="autoTable" layoutX="11.0" layoutY="43.0" prefHeight="168.0" prefWidth="582.0" />
+
+                <Label layoutX="11.0" layoutY="23.0" text="Cars" />
+                <Button layoutX="86.0" layoutY="563.0" mnemonicParsing="false" onAction="#backToMenu" prefHeight="28.0" prefWidth="66.0" text="Cancel">
+               <font>
+                  <Font size="10.0" />
+               </font></Button>
+                <Button fx:id="btn_close" layoutX="14.0" layoutY="562.0" mnemonicParsing="false" onAction="#closeApp" prefHeight="29.0" prefWidth="62.0" text="Exit" />
+            <Label layoutX="25.0" layoutY="211.0" text="Brand" />
+            <Label layoutX="89.0" layoutY="211.0" text="Model" />
+            <Label layoutX="159.0" layoutY="211.0" text="Generation" />
+            <Label layoutX="252.0" layoutY="211.0" text="Price" />
+            <Label layoutX="305.0" layoutY="211.0" text="Transmission" />
+            <Label layoutX="406.0" layoutY="211.0" text="Fuel" />
+            <Label layoutX="530.0" layoutY="210.0" text="VolumeE" />
+            <TextField fx:id="brandField" layoutX="15.0" layoutY="230.0" prefHeight="26.0" prefWidth="54.0" promptText="Brand" />
+            <TextField fx:id="modelField" layoutX="79.0" layoutY="230.0" prefHeight="26.0" prefWidth="58.0" promptText="Model" />
+            <TextField fx:id="generationField" layoutX="150.0" layoutY="230.0" prefHeight="26.0" prefWidth="82.0" promptText="Generation" />
+            <TextField fx:id="priceField" layoutX="242.0" layoutY="230.0" prefHeight="26.0" prefWidth="50.0" promptText="Price" />
+            <TextField fx:id="transmissionField" layoutX="302.0" layoutY="230.0" prefHeight="26.0" prefWidth="86.0" promptText="Transmission" />
+            <TextField fx:id="fuelField" layoutX="397.0" layoutY="230.0" prefHeight="26.0" prefWidth="57.0" promptText="Fuel" />
+            <TextField fx:id="yearField" layoutX="469.0" layoutY="230.0" prefHeight="26.0" prefWidth="53.0" promptText="Year" />
+            <TextField fx:id="volumeEField" layoutX="530.0" layoutY="230.0" prefHeight="26.0" prefWidth="53.0" promptText="Volume engine" />
+            <Button layoutX="496.0" layoutY="270.0" mnemonicParsing="false" onMouseClicked="#addCar" prefHeight="30.0" prefWidth="90.0" text="Add Car" />
+            <Button layoutX="342.0" layoutY="270.0" mnemonicParsing="false" onMouseClicked="#deleteCar" prefHeight="30.0" prefWidth="130.0" text="Delete Car" />
+            <Label layoutX="476.0" layoutY="211.0" text="Year" />
+            <TableView fx:id="userTable" layoutX="10.0" layoutY="312.0" prefHeight="154.0" prefWidth="363.0">
+               <columns>
+                  <TableColumn fx:id="emailColumn" prefWidth="93.0" text="E-mail" />
+                  <TableColumn fx:id="usernameColumn" prefWidth="89.0" text="Username" />
+                  <TableColumn fx:id="passwordColumn" prefWidth="104.0" text="Password" />
+                  <TableColumn fx:id="roleColumn" prefWidth="76.0" text="Role" />
+               </columns></TableView>
+            <Button layoutX="409.0" layoutY="486.0" mnemonicParsing="false" onMouseClicked="#addUser" prefHeight="30.0" prefWidth="90.0" text="Add User" />
+            <Button layoutX="389.0" layoutY="436.0" mnemonicParsing="false" onMouseClicked="#deleteUser" prefHeight="30.0" prefWidth="130.0" text="Delete User" />
+            <Label layoutX="15.0" layoutY="468.0" text="email" />
+            <Label layoutX="89.0" layoutY="468.0" text="username" />
+            <Label layoutX="183.0" layoutY="468.0" text="password" />
+            <Label layoutX="294.0" layoutY="468.0" text="role" />
+            <TextField fx:id="emailField" layoutX="13.0" layoutY="488.0" prefHeight="26.0" prefWidth="58.0" promptText="E-mail" />
+            <TextField fx:id="usernameField" layoutX="84.0" layoutY="488.0" prefHeight="26.0" prefWidth="70.0" promptText="Username" />
+            <TextField fx:id="passwordField" layoutX="175.0" layoutY="488.0" prefHeight="26.0" prefWidth="75.0" promptText="Password" />
+            <TextField fx:id="roleField" layoutX="275.0" layoutY="488.0" prefHeight="26.0" prefWidth="62.0" promptText="Role" />
+            <Button layoutX="510.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#updateCar" text="Update Car" />
+            <Label layoutX="14.0" layoutY="294.0" text="Users" />
+            <Button layoutX="382.0" layoutY="312.0" mnemonicParsing="false" onMouseClicked="#updateUser" text="Update User" />
+            <Label layoutX="221.0" layoutY="5.0" text="Admin panel">
+               <font>
+                  <Font name="Cambria Bold" size="29.0" />
+               </font>
+            </Label>
+
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

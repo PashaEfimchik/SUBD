@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #4a4a4a;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.controllers.RegisterController">
+    <center>
+        <AnchorPane fx:id="content_area" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="390.0" style="-fx-background-color: #9C9C9C;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+            <children>
+                <TextField fx:id="usernameField" layoutX="97.0" layoutY="91.0" prefHeight="40.0" prefWidth="200.0" promptText="Username">
+                    <cursor>
+                        <Cursor fx:constant="TEXT" />
+                    </cursor>
+                </TextField>
+                <TextField fx:id="emailField" layoutX="96.0" layoutY="156.0" prefHeight="40.0" prefWidth="200.0" promptText="Email">
+                    <cursor>
+                        <Cursor fx:constant="TEXT" />
+                    </cursor>
+                </TextField>
+                <PasswordField fx:id="passwordField" layoutX="96.0" layoutY="218.0" prefHeight="40.0" prefWidth="200.0" promptText="Password">
+                    <cursor>
+                        <Cursor fx:constant="TEXT" />
+                    </cursor>
+                </PasswordField>
+                <PasswordField fx:id="confirmPasswordField" layoutX="97.0" layoutY="276.0" prefHeight="40.0" prefWidth="200.0" promptText="Confirm Password">
+                    <cursor>
+                        <Cursor fx:constant="TEXT" />
+                    </cursor>
+                </PasswordField>
+                <Button layoutX="121.0" layoutY="346.0" mnemonicParsing="false" onMouseClicked="#registerUser" prefHeight="54.0" prefWidth="149.0" text="Register">
+                    <font>
+                        <Font name="Cambria" size="24.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Text layoutX="46.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration Form">
+                    <font>
+                        <Font name="Cambria Bold" size="36.0" />
+                    </font>
+                </Text>
+                <Button layoutX="121.0" layoutY="418.0" mnemonicParsing="false" onAction="#backToMenu" prefHeight="25.0" prefWidth="66.0" text="Cancel" />
+                <Button fx:id="btn_close" layoutX="208.0" layoutY="418.0" mnemonicParsing="false" onAction="#closeApp" prefHeight="25.0" prefWidth="62.0" text="Exit" />
+                <Label layoutX="107.0" layoutY="74.0" prefHeight="20.0" prefWidth="100.0" text="Username" />
+                <Label layoutX="107.0" layoutY="139.0" prefHeight="20.0" prefWidth="100.0" text="E-mail" />
+                <Label layoutX="107.0" layoutY="201.0" prefHeight="20.0" prefWidth="100.0" text="Password" />
+                <Label layoutX="107.0" layoutY="258.0" prefHeight="20.0" prefWidth="100.0" text="Confirm password" />
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

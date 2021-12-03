@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #4a4a4a;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.controllers.CatalogController">
+    <center>
+        <AnchorPane fx:id="content_area" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="604.0" style="-fx-background-color: #9C9C9C;" BorderPane.alignment="CENTER">
+            <children>
+                <TableView fx:id="autoTable" layoutX="11.0" layoutY="81.0" prefHeight="255.0" prefWidth="582.0" />
+                
+                <Button fx:id="addToCartButton" layoutX="440.0" layoutY="543.0" mnemonicParsing="false" onMouseClicked="#addToCart" prefHeight="45.0" prefWidth="133.0" text="Add to Cart">
+                    </Button>
+                <Pane fx:id="infoPane" layoutX="11.0" layoutY="338.0" prefHeight="150.0" prefWidth="528.0">
+                    <children>
+                        <Label fx:id="brandLabel" layoutX="20.0" layoutY="24.0" maxWidth="487.0" prefHeight="30.0" text="Article: ">
+
+                        </Label>
+                        <Label fx:id="modelLabel" layoutX="20.0" layoutY="70.0" text="Name: ">
+
+                        </Label>
+                        <Label fx:id="generationLabel" layoutX="20.0" layoutY="110.0" text="Supplier: ">
+
+                        </Label>
+                        <Pane prefHeight="20.0" prefWidth="49.0">
+                            <children>
+                                <Label layoutX="8.0" layoutY="1.0" text="INFO">
+
+                                </Label>
+                            </children>
+                        </Pane>
+                    </children>
+                </Pane>
+                <TextField fx:id="totalPriceField" editable="false" layoutX="424.0" layoutY="502.0" promptText="Total product cost" />
+                <Button layoutX="11.0" layoutY="559.0" mnemonicParsing="false" onAction="#closeApp" prefHeight="27.0" prefWidth="51.0" text="Exit" />
+                <Button layoutX="77.0" layoutY="560.0" mnemonicParsing="false" onAction="#logOut" text="Logout" textAlignment="CENTER">
+
+                </Button>
+                <Button layoutX="308.0" layoutY="549.0" mnemonicParsing="false" onAction="#showCart" prefHeight="33.0" prefWidth="76.0" text="My Cart" textAlignment="CENTER">
+
+                </Button>
+            <Label layoutX="251.0" layoutY="24.0" text="Catalog">
+               <font>
+                  <Font name="Cambria Bold" size="30.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>
