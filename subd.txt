@@ -1,0 +1,41 @@
+\sql
+\connect root@localhost:3306
+
+show databases;
+
+use autostore;
+
+show tables;
+
+select * from auto;
+
+select count(*) from auto; - количество всех записей
+
+select * from auto limit 2,3; - выбирает 3 записи из таблицы, начиная с 2 записи
+
+select * from auto order by name; - в алфавитном порядке
+
+select * from auto order by name DESC; - в обратном алфавитном порядке
+
+select * from auto limit 5; - выбирает 5 записей из таблицы
+
+select dictinct id from auto; - выбирает уникальные значения id
+
+select * from auto where id in (10, 15, 20); - выберет все записи таблицы, у которых id = 10, 15, 20
+
+select max(id) from auto; - выберет максимальное значение id из таблицы
+
+select min(id) from auto; - выберет минимальное значение id из таблицы
+
+delete from detail where year='2008';
+
+update auto set brand = 'Toyota' where id = '3';
+
+insert into detail(id, price, transmission, fuel, year, volumeE) values((select id from auto where generation='c218'), 23000, 'automatic', 'petrol', 2012, 5.5);
+
+select id, brand, model, generation, price, transmission, fuel, year, volumeE from auto inner join detail on id = autoId;
+
+SELECT DISTINCT last_name FROM person, address WHERE person.adress_no = address.address_no AND city LIKE 'L%'; - Выводит все уникальные фамилии людей (last_name), которые живут в городе с названием на букву L. (предполагаем, что в таблице address есть поля address_no, city).
+
+SELECT heroes.char_name, heroes.count, char_templates.ClassName FROM char_templates, heroes WHERE char_templates.ClassId = heroes.class_id Order by char_templates.ClassName; - Берем из таблицы heroes поле char_name, из heroes поле count, из таблицы char_templates поле ClassName, где char_templates.ClassId и heroes.class_id имеют общий идентификатор и сортируем запрос по имени класса героев.
+
